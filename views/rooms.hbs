@@ -1,0 +1,7 @@
+<a class="btn btn-secondary" href="/users/create-room">Create a room</a>
+
+{{#each rooms}}
+<h1>{{this.room}}</h1>
+<a class="btn btn-success" href="/users/room/{{this.room}}" >Join</a>
+{{/each}}
+

@@ -1,0 +1,104 @@
+<div class="login-body">
+    {{#if err}}
+    <div class="is-valid">
+        Email is already existed
+    </div>
+    {{/if}}
+
+
+    <form class="form-signin" action="/signup" method="post">
+    <h3 class="title">Sign Up</h3>
+        <label for="inputName">Name</label>
+        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputEmail">Email address</label>
+        <input type="email" name="gmail" id="inputEmail" class="form-control" placeholder="Email address" required
+            autofocus>
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="text" name="about" value="new to movieshub" hidden>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Sign up</button>
+        <a href="/login">already have ...account ?</a>
+    </form>
+
+</div>
+
+
+
+<style>
+    .login-body a{
+        margin-top: 20px;
+        color: rgb(0, 110, 255);
+    }
+    .login-body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10vh;
+    }
+    label {
+        font-size: 18px;
+        margin-top: 10px;
+
+    }
+
+    input {
+        border-radius: 7px;
+        padding: 5px;
+        margin: 5px;
+        font-family: cursive;
+    }
+
+    .is-valid {
+        color: red;
+        outline-color: rgb(0, 0, 0);
+    }
+
+    .btn {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .form-signin .checkbox {
+        font-weight: 400;
+    }
+
+    .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+</style>

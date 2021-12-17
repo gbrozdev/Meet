@@ -12,6 +12,7 @@ var db = require('./connection');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var chatRouter = require('./routes/chat');
+var camRouter = require('./routes/cam');
 //var chatRouter = require('./routes/chat');
 const hbs = require('express-handlebars');
 var app = express();
@@ -46,6 +47,7 @@ app.use(fileUpload());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/chat', chatRouter);
+app.use('/cam', camRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

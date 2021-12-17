@@ -21,7 +21,7 @@ router.get('/', async function(req, res) {
 });
 
 router.get('/room', function(req, res) {
-  res.send(req.session.room);
+  res.render('meet');
 });
 
 
